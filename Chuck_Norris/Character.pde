@@ -68,6 +68,11 @@ class Character
    return character.width;
   }
   
+  public int getHeight()
+  {
+    return character.height;
+  }
+  
   public void setIdle()
   {
     character = characterIdle;

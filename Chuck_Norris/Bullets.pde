@@ -1,7 +1,9 @@
+PImage bull;
+String bullName = "bullet.png";
 
 class Bullet
 {
-  int bulletSize = 20;
+  int bulletSize = 7;
   int bulletTime;
   int bulletCount;
   float bulletX,bulletY;
@@ -17,9 +19,10 @@ class Bullet
   
   void display()
   {
-    fill(255,0,0);
-    noStroke();
-    ellipse(bulletX, bulletY, bulletSize, bulletSize);
+    image(bull,bulletX,bulletY);
+    //fill(255,0,0);
+    //noStroke();
+    //ellipse(bulletX, bulletY, bulletSize, bulletSize);
   }
   
   void update()
@@ -27,9 +30,9 @@ class Bullet
     
     if(mousePressed && bulletSpeedX==0 && millis()-prevMillis>200)
     {
-      bulletX = bulletSize/2;
-      bulletY = height/2;
-      bulletSpeedX = 10.0;
+      bulletX = character.xPos + character.getWidth()-62;
+      bulletY = character.yPos + character.getHeight()*.25;
+      bulletSpeedX = 50.0;
       prevMillis = millis();
     }
     bulletX += bulletSpeedX;

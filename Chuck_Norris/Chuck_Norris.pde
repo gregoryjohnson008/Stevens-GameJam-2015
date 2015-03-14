@@ -16,7 +16,7 @@ Character character;
 void setup()
 {
   size(displayWidth, displayHeight);
-  startHeight = height - 150;
+  startHeight = height - 366;
   
   xPos = 25;
   yPos = startHeight;
@@ -28,6 +28,7 @@ void setup()
   start = true;
   main = end = false;
   backGround= loadImage(backGroundName);
+  bull = loadImage(bullName);
   bgX=0;
   bgSpeed=1;
   for(int i=0; i<bulletAmount; i++)
@@ -41,6 +42,7 @@ void setup()
 }
 void draw()
 {
+  background(0);
   scrollBackground();
   //fill(255, 0,0);
   //rect(width/2 - 6 , 0, 12, height);
