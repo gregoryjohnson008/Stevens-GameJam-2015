@@ -9,6 +9,11 @@ void scrollBackground()
     bgSpeed = moveVal;
     image(backGround,bgX,-580);
     bgX -= bgSpeed;
+    for(int i=0; i<enemyAmount; i++)
+    {
+      enemy[i].xEPos -= bgSpeed;
+    }
+
     if(bgX <= -(width*2))
     {
       bgX = 0;

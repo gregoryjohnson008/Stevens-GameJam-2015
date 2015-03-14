@@ -57,7 +57,7 @@ class Character
     else if(dir == 'j')
     {
       //jumping
-      //character = characterJump[animNum = (animNum + 1) % 2];
+      character = characterJump[animNum = (animNum + 1) % 2];
     }
     xPos = min(width/2, x);
     yPos = min(startHeight, y); 

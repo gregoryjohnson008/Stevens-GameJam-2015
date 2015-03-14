@@ -1,4 +1,4 @@
-PImage bull;
+ PImage bull;
 String bullName = "bullet.png";
 
 class Bullet
@@ -20,9 +20,6 @@ class Bullet
   void display()
   {
     image(bull,bulletX,bulletY);
-    //fill(255,0,0);
-    //noStroke();
-    //ellipse(bulletX, bulletY, bulletSize, bulletSize);
   }
   
   void update()
